@@ -62,11 +62,10 @@ binary_tree_t *search_uncle(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		const binary_tree_t *second)
-size_t	binary_tree_height_aux(const binary_tree_t *tree);
-void print_level_order(const binary_tree_t *tree, int level,
-		void (*func)(int));
+levelorder_queue_t *create_node(binary_tree_t *node);
+void free_queue(levelorder_queue_t *head);
+void pint_push(binary_tree_t *node, levelorder_queue_t *head,
+		levelorder_queue_t **tail, void (*func)(int));
+void pop(levelorder_queue_t **head);
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
-int count_nodes(binary_tree_t *root);
-int is_complete(binary_tree_t *root, int index, int n);
-int binary_tree_is_complete(const binary_tree_t *tree);
 #endif
