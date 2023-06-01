@@ -25,7 +25,7 @@ size_t depth(const binary_tree_t *tree)
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		const binary_tree_t *second)
 {
-	binary_tree_t  *mum, *dad, *h;
+	binary_tree_t  *senior, *junior, *h;
 	size_t f, s;
 
 	if (!first || !second)
@@ -40,19 +40,19 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		return (first->parent);
 	}
 
-	mum = (f <= s) ? (binary_tree_t  *)first : (binary_tree_t  *)second;
-	dad = (f <= s) ? (binary_tree_t  *)second : (binary_tree_t  *)first;
-	h = dad;
-	while (mum)
+	senior = (f <= s) ? (binary_tree_t  *)first : (binary_tree_t  *)second;
+	junior = (f <= s) ? (binary_tree_t  *)second : (binary_tree_t  *)first;
+	h = junior;
+	while (senior)
 	{
-		while (dad)
+		while (junior)
 		{
-			if (dad == mum)
-				return (dad);
-			dad = dad->parent;
+			if (junior == senior)
+				return (junior);
+			junior = junior->parent;
 		}
-		dad = h;
-		mum = dad->parent;
+		junior = h;
+		senior = senior->parent;
 	}
 	return (NULL);
 }
