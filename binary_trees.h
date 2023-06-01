@@ -69,4 +69,5 @@ void print_level_order(const binary_tree_t *tree, int level,
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 int binary_tree_is_complete(const binary_tree_t *tree);
 int custom_height(const binary_tree_t *tree);
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 #endif
