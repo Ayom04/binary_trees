@@ -1,7 +1,4 @@
 #include "binary_trees.h"
-size_t	binary_tree_height_aux(const binary_tree_t *tree);
-void print_level_order(const binary_tree_t *tree, int level, void (*func)(int));
-void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 
 /**
  * binary_tree_height_aux -  a tree
