@@ -75,4 +75,5 @@ int binary_tree_is_bst(const binary_tree_t *tree);
 int is_bst_helper(const binary_tree_t *tree, int *largest);
 int is_left(const binary_tree_t *node);
 int is_right(const binary_tree_t *node);
+bst_t *bst_insert(bst_t **tree, int value)
 #endif
