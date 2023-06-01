@@ -99,4 +99,5 @@ int binary_tree_is_heap(const binary_tree_t *tree);
 size_t bts(const binary_tree_t *tree);
 heap_t *heap_nf(heap_t *root, size_t number);
 heap_t *heap_r(heap_t *new, heap_t *parent);
+heap_t *array_to_heap(int *array, size_t size);
 #endif
