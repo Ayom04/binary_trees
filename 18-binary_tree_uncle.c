@@ -22,11 +22,11 @@ binary_tree_t *search_uncle(binary_tree_t *node)
  * binary_tree_uncle - finds the uncle of a node
  *
  * @node: pointer to the node to find the uncle
- * REturn: NULL if node has no uncle
+ * Return: NULL if node has no uncle
 */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
-    if (!node || !(node->parent))
+	if (!node || !(node->parent))
 		return (NULL);
 	return (search_uncle(node->parent));
 }
