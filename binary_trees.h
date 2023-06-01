@@ -92,4 +92,7 @@ avl_t *avl_insert_recursive(avl_t **tree, avl_t *parent,
 avl_t *avl_insert(avl_t **tree, int value);
 avl_t *array_to_avl(int *array, size_t size);
 avl_t *avl_remove(avl_t *root, int value);
+avl_t *sorted_array_to_avl(int *array, size_t size);
+avl_t *sorted_array_to_avl_revursive(int *array, int first_index,
+		int final_index);
 #endif
