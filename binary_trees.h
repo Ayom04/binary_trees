@@ -96,4 +96,7 @@ avl_t *sorted_array_to_avl(int *array, size_t size);
 avl_t *sorted_array_to_avl_revursive(int *array, int first_index,
 		int final_index);
 int binary_tree_is_heap(const binary_tree_t *tree);
+size_t bts(const binary_tree_t *tree);
+heap_t *heap_nf(heap_t *root, size_t number);
+heap_t *heap_r(heap_t *new, heap_t *parent);
 #endif
